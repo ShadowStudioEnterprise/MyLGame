@@ -1,5 +1,6 @@
 package org.alpha.shadowstudio.mylifeisagame;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +15,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class RegisterActivity extends AppCompatActivity {
     private EditText email;
@@ -47,7 +50,12 @@ public class RegisterActivity extends AppCompatActivity {
                                         FirebaseUser user = mAuth.getCurrentUser();
                                         String se=user.getUid();
                                         Usuario us= new Usuario(nombre.getText().toString(),email.getText().toString(), usuario.getText().toString());
-                                        finish();
+                                        FirebaseDatabase database = FirebaseDatabase.getInstance();
+                                        DatabaseReference usuarioRef = database.getReference("Usuarios");
+                                        String clau = usuarioRef.push().getKey();
+                                        usuarioRef.child(clau).setValue(us);
+                                        Intent intent= new Intent(getApplicationContext(), CargaActivity.class);
+                                        startActivity(intent);
                                     } else {
                                         Log.w("Firebase", "signInWithEmail:failure", task.getException());
                                         Toast.makeText(RegisterActivity.this, "Authentication failed.", Toast.LENGTH_SHORT).show();

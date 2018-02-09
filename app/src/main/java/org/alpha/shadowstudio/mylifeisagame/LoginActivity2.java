@@ -39,7 +39,8 @@ public class LoginActivity2 extends AppCompatActivity {
                                 if (task.isSuccessful()) {
                                     Log.d("Firebase", "signInWithEmail:success");
                                     FirebaseUser user = mAuth.getCurrentUser();
-                                    finish();
+                                    Intent intent= new Intent(getApplicationContext(), CargaActivity.class);
+                                    startActivity(intent);
                                 } else {
                                     Log.w("Firebase", "signInWithEmail:failure", task.getException());
                                     Toast.makeText(LoginActivity2.this, "Authentication failed.",

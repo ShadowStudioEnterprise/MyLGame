@@ -77,7 +77,8 @@ public class LoginActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             Log.d("firebase", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-
+                            Intent intent= new Intent(getApplicationContext(), CargaActivity.class);
+                            startActivity(intent);
                         } else {
                             Log.w("firebase", "signInWithCredential:failure", task.getException());
                         }

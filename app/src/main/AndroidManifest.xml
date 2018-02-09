@@ -19,7 +19,10 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity2" />
-        <activity android:name=".CargaActivity"></activity>
+        <activity android:name=".CargaActivity" />
+        <activity android:name=".TareasActivity" />
+        <activity android:name=".UsuarioActivity" />
+        <activity android:name=".UsuarioAddActivity"></activity>
     </application>
 
 </manifest>

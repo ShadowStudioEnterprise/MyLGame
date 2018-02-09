@@ -1,22 +1,41 @@
 package org.alpha.shadowstudio.mylifeisagame;
 
-/**
- * Created by alu20487670y on 17/01/18.
- */
-
 public class Usuario {
-    String uid;
-    String nombre;
-    String correo;
-    String nickUsuario;
-    int nivel;
 
-    public Usuario(String uid, String nombre, String correo, String nickUsuario) {
-        this.uid = uid;
+    private String nombre;
+    private String correo;
+    private String nick;
+    private int nivel;
+    private int exp_conseguida;
+
+
+    public Usuario(String nombre, String correo, String nick) {
         this.nombre = nombre;
         this.correo = correo;
-        this.nickUsuario = nickUsuario;
+        this.nick = nick;
         nivel=0;
+        exp_conseguida=0;
     }
 
+    public Usuario(String nombre, String nick, int nivel) {
+        this.nombre = nombre;
+        this.nick = nick;
+        this.nivel = nivel;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public String getNick() {
+        return nick;
+    }
+
+    public int getNivel() {
+        return nivel;
+    }
 }
