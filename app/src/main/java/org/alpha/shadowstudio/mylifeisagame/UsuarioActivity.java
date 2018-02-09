@@ -38,7 +38,7 @@ public class UsuarioActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(getApplicationContext(),UsuarioAddActivity.class);
-                intent.putExtra("tarea",tarea);
+                intent.putExtra("Tarea",tarea);
                 startActivity(intent);
             }
         });
