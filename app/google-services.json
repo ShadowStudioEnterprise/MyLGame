@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "745955464977",
+    "firebase_url": "https://mylifeisagame-50583.firebaseio.com",
+    "project_id": "mylifeisagame-50583",
+    "storage_bucket": "mylifeisagame-50583.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:745955464977:android:b4181b5863f26a67",
+        "android_client_info": {
+          "package_name": "org.alpha.shadowstudio.mylifeisagame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "745955464977-9paccmio4sssjndh71mbn7jt11j2brlv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "org.alpha.shadowstudio.mylifeisagame",
+            "certificate_hash": "21f3b678cfe806aeeb50e1e771d1dd40f908656a"
+          }
+        },
+        {
+          "client_id": "745955464977-e1frkcj7bsm7hkh2brqi7a0rc5stl0qu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWM2xhvWwnQT-7V9zoGQ0wHRvaso5XdbE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "745955464977-e1frkcj7bsm7hkh2brqi7a0rc5stl0qu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

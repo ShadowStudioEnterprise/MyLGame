@@ -49,16 +49,20 @@ public class HomeFragment extends Fragment {
         Cursor rs = bd.rawQuery("SELECT * FROM TAREA", null);
         if (rs != null) {
             int count=0;
-            while (rs.moveToNext()||count<3) {
-                Tarea tarea = new Tarea(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getString(4), rs.getLong(5), rs.getLong(6));
-                if (rs.getInt(7) > 0) {
-                    tarea.setEncurso(true);
+            while (rs.moveToNext()) {
+                if (count<3) {
+                    Tarea tarea = new Tarea(rs.getInt(1), rs.getInt(2), rs.getString(3), rs.getString(4), rs.getLong(5), rs.getLong(6));
+                    if (rs.getInt(7) > 0) {
+                        tarea.setEncurso(true);
+                    }
+                    if (rs.getInt(8) > 0) {
+                        tarea.setCanceladaOFallida(true);
+                    }
+                    arrayList.add(tarea);
+                    count++;
+                }else {
+                    break;
                 }
-                if (rs.getInt(8) > 0) {
-                    tarea.setCanceladaOFallida(true);
-                }
-                arrayList.add(tarea);
-                count++;
             }
         }
         rs.close();
